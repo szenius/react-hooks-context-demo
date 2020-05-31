@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ma20 {
+  margin: 20px;
+}
+
+.toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ball--red,
+.ball--blue,
+.ball--yellow {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+}
+
+.ball--red {
+  background-color: red;
+}
+
+.ball--blue {
+  background-color: blue;
+}
+
+.ball--yellow {
+  background-color: yellow;
+}
