@@ -7,13 +7,24 @@ export const ColorToggle = () => {
   const dispatchSetColor = (label) => dispatch(setColor(label));
   return (
     <div className="toggle ma20">
-      <ColorToggleButton label={"red"} dispatchSetColor={dispatchSetColor} />
-      <ColorToggleButton label={"blue"} dispatchSetColor={dispatchSetColor} />
-      <ColorToggleButton label={"yellow"} dispatchSetColor={dispatchSetColor} />
+      <ColorToggleButton
+        label={"red"}
+        onClickHandler={() => dispatchSetColor("red")}
+      />
+      <ColorToggleButton
+        label={"blue"}
+        onClickHandler={() => dispatchSetColor("blue")}
+      />
+      <ColorToggleButton
+        label={"yellow"}
+        onClickHandler={() => dispatchSetColor("yellow")}
+      />
     </div>
   );
 };
 
-export const ColorToggleButton = ({ label, dispatchSetColor }) => (
-  <button className="ma20" onClick={() => dispatchSetColor(label)}>{label}</button>
+export const ColorToggleButton = ({ label, onClickHandler }) => (
+  <button className="ma20" onClick={onClickHandler}>
+    {label}
+  </button>
 );
